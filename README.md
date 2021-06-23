@@ -1,6 +1,5 @@
-## What is this for?
-### A flexible project structure for doing and sharing genomics and bioinformatics work
-This is a template for reproducible, easy to deploy code across environments and machines based on the use of [Docker](https://docs.docker.com/engine/docker-overview/) containers.
+## Example code for personal repository
+### Code in this repository aims to be reproducible, easy to deploy across environments and machines based on the use of [Docker](https://docs.docker.com/engine/docker-overview/) containers.
 
 <a name="top"></a>
 
@@ -30,14 +29,12 @@ or [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/).
 
 <a name="about"></a>
 
-#### About this template
-When starting a new project, you should start a new repository and use this template and modified as you need it.  
-A fresh repository will provide:
-
-* Folders for notebooks (*i.e.,* jupyter and R Notebooks) to develop and report on analysis.     
+#### About this project
+This repository includes:
+* Folder for the src code.   
+* Folders for notebooks (*i.e.,* jupyter and R Notebooks) to develop and report on exploratory data analysis.     
 * Folder for data, which ideally will be hosted in a data server, and is never synchronized with git.        
-* Folder for src code, which you might want to use for other code outside of the notebooks.    
-* A basic container to reproduce development environments using [docker](https://docs.docker.com/)   
+* A container to reproduce development environments using [docker](https://docs.docker.com/)   
 
 <a name="repoview"></a>
 
@@ -48,8 +45,12 @@ A fresh repository will provide:
     |-- README.md
     |-- docker-compose.yml
     |-- code/
-        |-- script-to-populate-data_dir.sh
-        |-- script-to-launch-docker.sh 
+        |-- kmergrammar/
+        |-- README.md
+        |-- MANISFEST.in
+        |-- INSTALL.rst
+        |-- setup.py
+        |-- env_kmergrammar.yml
     |-- data/
         |--.gitignore
     |-- docker/
@@ -60,7 +61,7 @@ A fresh repository will provide:
 
 <a name="launchcbsu"></a>
 
-##### Launch Docker In a CBSU machine 
+##### When working at Cornell I launch Docker In a CBSU machine 
 1. First you need a reservation in a `cbsuxxx` machine  
 2. Login and navigate to workdir with `cd /workdir` and make a folder with the netid `mkdir mynetid`  
 3. Navigate to the folder `cd mynetid` and clone the repository `git clone`  
@@ -102,7 +103,7 @@ You can mount volumes and directories to Docker on BioHPC using -v option. For s
 
 <a name="notcbsu"></a>
 
-##### Not in CBSU? Install Docker in the machine of your choice
+##### Not in CBSU? I use Docker in a different machine
 
 1. To use the docker images you first need to install Docker:  
 For Mac: https://docs.docker.com/docker-for-mac/  
@@ -134,11 +135,8 @@ You may need to be `sudo` to run `docker` commands. Try them without `sudo` firs
 ### Goals 
 
 A few of key goals working with Docker containers are.
-
  - To keep the image size at a manageable size.
-
  - Make the images easy to extend, and easy to maintain
-
  - Adopt a "best practices" outline to facilitate the use of the containers.
 
 <a name="guidelines"></a>
@@ -148,7 +146,7 @@ A few of key goals working with Docker containers are.
 <a name="foldersguide"></a>
 
 ##### Folders should have a README
-Describe files that are not self-explanatory
+Useful to describe files that are not self-explanatory
 
 <a name="filesguide"></a>
 
