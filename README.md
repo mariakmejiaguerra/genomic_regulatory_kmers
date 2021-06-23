@@ -1,10 +1,9 @@
-## Example code for personal repository
-### Code in this repository aims to be reproducible, easy to deploy across environments and machines based on the use of [Docker](https://docs.docker.com/engine/docker-overview/) containers.
+#### Code in this repository aims to be reproducible, easy to deploy across environments and machines based on the use of [Docker](https://docs.docker.com/engine/docker-overview/) containers.
 
 <a name="top"></a>
 
 - [About containers](#containers)
-- [About this template](#about)
+- [About this project](#about)
 - [General view of the repository](#repoview)
 - [Launch Docker In a CBSU machine](#launchcbsu)
   * [Example 1 - run bash](#ie1)
